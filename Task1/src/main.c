@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define FILE_NAME "file.txt"
+#define FILE_NAME "output.txt"
 #define STRING_TO_WRITE "String from file"
 #define STRING_LENGTH 16
 
