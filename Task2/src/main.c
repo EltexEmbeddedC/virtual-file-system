@@ -1,5 +1,5 @@
-#include <stdio.h>
+#include <../include/file_manager.h>
 
 int main() {
-  return 0;
+  run_file_manager();
 }

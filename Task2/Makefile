@@ -5,6 +5,7 @@ INCDIR = include
 
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -I$(INCDIR)
+LDFLAGS = -lncurses
 
 SRCS = $(wildcard $(SRCDIR)/*.c)
 
@@ -14,7 +15,7 @@ all: $(BINDIR)/$(PROGRAM)
 
 $(BINDIR)/$(PROGRAM): $(OBJS)
 	@mkdir -p $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(SRCDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
